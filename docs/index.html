@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Muro de la verguenza</title>
+
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MuroDelaVerguenza</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Golpistas</a>
+</li>
+<li>
+  <a href="graph1.html">Grafico-votación</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Muro de la verguenza</h1>
+
+</div>
+
+
+<div id="muro-de-la-verguenza-perú" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Muro de la Verguenza Perú</h1>
+<p>En esta página recordaremos a <a href="mailto:tod@s" class="email">tod@s</a> los políticos y partidos que con sus decisiones han afectado al país.
+- <a href="https://github.com/DecideBienpe/muro-verguenza-peru">Repo</a>
+- <a href="https://github.com/DecideBienpe/muro-verguenza-peru">Créditos</a></p>
+<div id="vacanciagolpe" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Vacancia/Golpe</h2>
+<p>El 9 de Noviembre 105 congresistas votaron por la vacancia del presidente Martín Vizcarra. Sin hechos comprobados estos congresistas prefirieon vacar al presidente 5 meses antes de un proceso electoral y en plena pandemia.</p>
+<p>Sus nombres quedarán grabados en este Muro de la Verguenza, para nunca olvidarnos quienes son.</p>
+<div id="golpistas" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Golpistas</h3>
+<table>
+<colgroup>
+<col width="48%" />
+<col width="51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Congresita</th>
+<th align="left">Partido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">JESUS ORLANDO ARAPA ROQUE</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">WILMER SOLIS BAJONERO OLIVAS</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">RICARDO MIGUEL BURGA CHUQUIPIONDO</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">KENYON EDUARDO DURAND BUSTAMANTE</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">YESSY NELIDA FABIAN DIAZ</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">PAUL GABRIEL GARCIA OVIEDO</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">OTTO NAPOLEON GUIBOVICH ARTEAGA</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">LEONARDO INGA SALES</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">FREDDY LLAULLI ROMERO</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">ANTHONY RENSON NOVOA CRUZADO</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">JUAN CARLOS OYOLA RODRIGUEZ</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">ROSARIO PAREDES EYZAGUIRRE</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">CARLOS ANDRES PEREZ OCHOA</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">WALTER JESUS RIVERA GUERRA</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">ROLANDO RUBEN RUIZ PINEDO</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">MONICA ELIZABETH SAAVEDRA OCHARAN</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">FRANCO SALINAS LOPEZ</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">LUIS CARLOS SIMEON HURTADO</td>
+<td align="left">ACCION POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">EDUARDO GEOVANNI ACATE CORONEL</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">HUMBERTO ACUÑA PERALTA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">WALTER BENAVIDES GAVIDIA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">IRENE CARCAUSTO HUANCA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">OMAR KARIM CHEHADE MOYA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">CESAR AUGUSTO COMBINA SALVATIERRA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">JULIO FREDY CONDORI FLORES</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">MOISES GONZALEZ CRUZ</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">ALEXANDER HIDALGO ZAMALLOA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">FERNANDO MELENDEZ CELIS</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">OMAR MERINO LOPEZ</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">MARIA DEL CARMEN OMONTE DURAND</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">JHOSEPT AMADO PEREZ MIMBELA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">LUSMILA PEREZ ESPIRITU</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">NAPOLEON PUÑO LECARNAQUE</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">MARIO JAVIER QUISPE SUAREZ</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">PERCI RIVAS OCEJO</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">TANIA ROSALIA RODAS MALCA</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">ROBERTINA SANTILLANA PAREDES</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">LUIS ALBERTO VALDEZ FARIAS</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="odd">
+<td align="left">MARCO ANTONIO VERDE HEIDINGER</td>
+<td align="left">ALIANZA PARA EL PROGRESO</td>
+</tr>
+<tr class="even">
+<td align="left">JOSE LUIS ANCALLE GUTIERREZ</td>
+<td align="left">EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD</td>
+</tr>
+<tr class="odd">
+<td align="left">LENIN FERNANDO BAZAN VILLANUEVA</td>
+<td align="left">EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD</td>
+</tr>
+<tr class="even">
+<td align="left">LENIN ABRAHAM CHECCO CHAUCA</td>
+<td align="left">EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD</td>
+</tr>
+<tr class="odd">
+<td align="left">CARLOS ENRIQUE FERNANDEZ CHACON</td>
+<td align="left">EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD</td>
+</tr>
+<tr class="even">
+<td align="left">ABSALON MONTOYA GUIVIN</td>
+<td align="left">EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD</td>
+</tr>
+<tr class="odd">
+<td align="left">YVAN QUISPE APAZA</td>
+<td align="left">EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD</td>
+</tr>
+<tr class="even">
+<td align="left">JULIA BENIGNA AYQUIPA TORRES</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">ALFREDO BENITES AGURTO</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">LUZ MILAGROS CAYGUARAY GAMBINI</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">WILMER CAYLLAHUA BARRIENTOS</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">MARIA TERESA CESPEDES CARDENAS DE VELASQUEZ</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">ROBLEDO NOE GUTARRA RAMOS</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">JUAN DE DIOS HUAMAN CHAMPI</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">NELLY HUAMANI MACHACA DE ESPINOZA</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">RAUL MACHACA MAMANI</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">JESUS DEL CARMEN NUÑEZ MARREROS</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">DANIEL OSEDA YUCRA</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">ISAIAS PINEDA SANTOS</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">ALCIDES RAYME MARIN</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="odd">
+<td align="left">MARIA CRISTINA RETAMOZO LEZAMA</td>
+<td align="left">FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP</td>
+</tr>
+<tr class="even">
+<td align="left">GILBERT JUAN ALONZO FERNANDEZ</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">RITA ELENA AYASTA DE DIAZ</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">MARTHA GLADYS CHAVEZ COSSIO</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">DIETHELL COLUMBUS MURATA</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">MARTIRES LIZANA SANTOS</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">CARLOS FERNANDO MESIA RAMIREZ</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">MARCOS ANTONIO PICHILINGUE GOMEZ</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">LILIANA ANGELICA PINEDO ACHACA</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">MARIA LUISA SILUPU INGA</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">ERWIN TITO ORTEGA</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">GILMER TRUJILLO ZEGARRA</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">VALERIA CAROLINA VALER COLLADO</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">WIDMAN NAPOLEON VIGO GUTIERREZ</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">MIGUEL ANGEL VIVANCO REYES</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="even">
+<td align="left">EDWARD ALEXANDER ZARATE ANTON</td>
+<td align="left">FUERZA POPULAR</td>
+</tr>
+<tr class="odd">
+<td align="left">HIRMA NORMA ALENCASTRE MIRANDA</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">GUILLERMO ALEJANDRO ANTONIO ALIAGA PAJARES</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">BETTO BARRIONUEVO ROMERO</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">LUIS REYMUNDO DIOSES GUZMAN</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">CESAR GONZALES TUANAMA</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">JORGE LUIS PEREZ FLORES</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">FELICITA MADALEINE TOCTO GUERRERO</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">GRIMALDO VASQUEZ TAN</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">MARIANO ANDRES YUPANQUI MIÑANO</td>
+<td align="left">PARTIDO DEMOCRATICO SOMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">CARLOS ALBERTO ALMERI VERAMENDI</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">MARIA TERESA CABRERA VEGA</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">LUIS FELIPE CASTILLO OLIVA</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">YEREMI ARON ESPINOZA VELARDE</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">JOHAN FLORES VILLEGAS</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">MARIA MARTINA GALLARDO BECERRA</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">JAQUELINE CECILIA GARCIA RODRÍGUEZ</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">ROBINSON DOCITEO GUPIOC RIOS</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">JOSE LUIS LUNA MORALES</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">ORESTES POMPEYO SANCHEZ LUIS</td>
+<td align="left">PODEMOS PERU</td>
+</tr>
+<tr class="even">
+<td align="left">EDGAR ARNOLD ALARCON TEJADA</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">YESSICA MARISELA APAZA QUISPE</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="even">
+<td align="left">MARIA ISABEL BARTOLO ROMERO</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">POSEMOSCROWTE IRRHOSCOPT CHAGUA PAYANO</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="even">
+<td align="left">HIPOLITO CHAIÑA CONTRERAS</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">ROBERTO CARLOS CHAVARRIA VILCATOMA</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="even">
+<td align="left">ALEXANDER LOZANO INOSTROZA</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">JIM ALI MAMANI BARRIGA</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="even">
+<td align="left">HECTOR SIMON MAQUERA CHAVEZ</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">JAVIER MENDOZA MARQUINA</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="even">
+<td align="left">RUBEN PANTOJA CALVO</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="odd">
+<td align="left">RUBEN RAMOS ZAPANA</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+<tr class="even">
+<td align="left">JOSE ALEJANDRO VEGA ANTONIO</td>
+<td align="left">UNION POR EL PERU</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
