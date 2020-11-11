@@ -1,0 +1,22 @@
+name: MuroDelaVerguenza
+navbar: 
+  left: 
+    - 
+      href: index.html
+      icon: fa-home
+      text: Decidebien
+    - 
+      href: graph1.html
+      text: Cambios votación
+      
+  title: "MuroDelaVerguenza"
+output:
+  bookdown::html_document2:
+    theme: cosmo
+    toc: yes
+    toc_depth: 3
+    toc_float: true
+    highlight: haddock
+    includes:
+      #in_header: code.js
+output_dir: docs
