@@ -8,8 +8,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
 # Muro de la Verguenza Perú
 
-En esta página recordaremos a tod@s los políticos y partidos que con sus decisiones han afectado al país.
- - [Repo](https://github.com/DecideBienpe/muro-verguenza-peru)
+En esta página recordaremos a tod@s los políticos y partidos que con sus decisiones han afectado al país.  
+ - [Repo](https://github.com/DecideBienpe/muro-verguenza-peru)  
  - [Créditos](https://github.com/DecideBienpe/muro-verguenza-peru)
 
 ## Vacancia/Golpe
