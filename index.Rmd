@@ -8,13 +8,16 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
 # Muro de la Verguenza Perú
 
-En esta página recordaremos a tod@s los políticos y partidos que con sus decisiones han afectado al país. 
+En esta página recordaremos a tod@s los políticos y partidos que con sus decisiones han afectado al país.
+ - [Repo](https://github.com/DecideBienpe/muro-verguenza-peru)
+ - [Créditos](https://github.com/DecideBienpe/muro-verguenza-peru)
 
 ## Vacancia/Golpe
 
 El 9 de Noviembre 105 congresistas votaron por la vacancia del presidente Martín Vizcarra. Sin hechos comprobados estos congresistas prefirieon vacar al presidente 5 meses antes de un proceso electoral y en plena pandemia. 
 
 Sus nombres quedarán grabados en este Muro de la Verguenza, para nunca olvidarnos quienes son.
+
 
 ### Golpistas
 
@@ -25,6 +28,7 @@ data=import("infocongresistas.xlsx")%>%
   filter(VotacionVacancia==1)%>%
   dplyr::select(Congresita,Partido="ORGPOL")
 
-data%>%kableExtra::kable("markdown")
+data%>%arrange(Partido)%>%
+  kableExtra::kable("markdown")
 ```
 

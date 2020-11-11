@@ -3,11 +3,11 @@ navbar:
   left: 
     - 
       href: index.html
-      icon: fa-home
-      text: Decidebien
+      icon: 
+      text: Golpistas
     - 
       href: graph1.html
-      text: Cambios votación
+      text: Grafico-votación
       
   title: "MuroDelaVerguenza"
 output:
