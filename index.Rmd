@@ -32,4 +32,21 @@ data%>%arrange(Partido)%>%
   kableExtra::kable("markdown")
 ```
 
-#### 
+## Complices de la violencia policial
+
+Estos congresistas votaron para no pedir explicaciones al director de la policia por los excesos cometidos durante las protestas del 9-11 de Noviembre. Recordemos
+
+
+
+```{r}
+data=import("infocongresistas.xlsx")%>%
+  filter(PROTESTA1==1)%>%
+  dplyr::select(Congresita,Partido="ORGPOL")
+
+data%>%arrange(Partido)%>%
+  kableExtra::kable("markdown")
+```
+
+*Fuente*
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/AlertaLegislativa?src=hash&amp;ref_src=twsrc%5Etfw">#AlertaLegislativa</a>: La Comisión de Justicia no aprobó el pedido de Alberto de Belaunde y Rocío Silva de solicitar al general General PNP Jorge Lam por la violencia ejercida en las protestas de estos días. Fueron 8 votos en contra, 2 a favor y 1 abstención.</p>&mdash; Martin Hidalgo (@martinhidalgo) <a href="https://twitter.com/martinhidalgo/status/1326584942369902593?ref_src=twsrc%5Etfw">November 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
