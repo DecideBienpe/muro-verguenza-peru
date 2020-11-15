@@ -1,0 +1,318 @@
+/*General*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;/*reset para REMS  62.5% = 10px de 16px*/
+}
+.section {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+
+/*Slider*/
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    body { margin: 0; } 
+    div#slider { overflow: hidden; }
+    div#slider figure img { width: 20%; float: left; }
+    div#slider figure div { width: 20%; float: left; }
+    div#slider figure { 
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 20s slidy infinite; 
+    }
+.slider {
+    width: 60%;
+}
+header img, .imgSlider {
+    height: 100vh;
+    min-height: 60rem;
+}
+.img-a, .img-b, .img-c, .img-d {
+    background-position: center center;
+    background-size: cover;
+}
+.img-a {
+    background-image: url('../img/img1.jpg');
+}
+.img-b {
+    background-image: url('../img/img2.jpg');
+}
+.img-a {
+    background-image: url('../img/img1.jpg');
+}
+.img-c {
+    background-image: url('../img/img3.png');
+}
+.img-d {
+    background-image: url('../img/img4.jpg');
+}
+/*Header*/
+.headerSection {
+    display: flex;
+    height: 100vh;
+    min-height: 60rem;
+}
+.titulo, .headerTexto, .headerMenu {
+    height: 20rem;
+}
+.text {
+    width: 40%;
+    position: relative;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 8rem;
+    text-align: center;
+    margin: 0;
+    height: 20rem;
+    margin-top: 2rem;
+}
+.headerTexto p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 4rem;
+}
+.headerMenu ul {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 6rem;
+}
+.headerMenu li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    list-style: none;
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+}
+.headerMenu li:hover {
+    color: red;
+}
+.headerMenu li:last-of-type {
+    margin-right: 0rem;
+}
+.containerText {
+    position: absolute;
+    height: 60rem;
+    top: 50%;
+    margin-top: -30rem;
+}
+
+/*Main*/
+.informateSite, .involucrateSite {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 120rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.row div {
+    flex-basis: calc(33.3% - 3rem);
+    text-align: center;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.9rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.row div h3{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: inherit;
+}
+h2 {
+    text-align: center;
+    font-size: roboto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+}
+.informateTitulo, .involucrateTitulo {
+    background: red;
+    color: white;
+}
+.bandera {
+    display: none;
+    background: green;
+    position: absolute !important;
+    height: 5rem !important;
+    width: 10rem;
+    left: 50%;
+    margin-left: -60px;
+    top: 28.5rem;
+    background-image: url(../img/peru.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/*Vacamcia*/
+
+/*imágenes*/
+.partido .logo {
+    width: 18rem;
+    position: relative;
+}
+.logo img {
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -5rem;
+    top: 50%;
+    margin-top: -5rem;  
+}
+
+.ojo img {
+    width: 3rem;
+}
+
+/*Columnas*/
+.mainVacancia {
+    display: flex;
+    max-width: 120rem;
+    margin: 0 auto; 
+}
+.partido {
+    display: flex;
+}
+.ap {
+    height: 80rem;
+}
+.app {
+    height: 67rem;
+}
+.fa {
+    height: 29rem;
+}
+.frepap {
+    height: 48rem;
+}
+.fp {
+    height: 48rem;
+}
+.sp {
+    height: 35rem;
+}
+.pm {
+    height: 29rem;
+}
+.pp {
+    height: 35rem;
+}
+.up {
+    height: 42rem;
+}
+.congresista {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    border: 1px solid black;
+}
+.nombreCongresista {
+    font-family: 'Roboto', sans-serif;
+    width: 49rem;
+    padding-left: 2rem;
+}
+.nombreCongresista p {
+    font-size: 2rem;
+    margin: 0;
+}
+.congresista .ojo {
+    padding-right: 1rem;
+}
+.partido .nombrePartido {
+    width: 18rem;
+    position: relative;
+    color: #fff;
+}
+.ap .nombrePartido {
+    background-color: #E6131C;
+}
+.app .nombrePartido {
+    background-color: #1E5BA8;
+}
+.fa .nombrePartido {
+    background-color:#49b848;
+}
+.frepap .nombrePartido {
+    background-color:#260c71;
+}
+.fp .nombrePartido {
+    background-color: #ec6e00;
+}
+.sp .nombrePartido {
+    background-color: #20488e;
+}
+.pm .nombrePartido {
+    background-color: #4f1b7f;
+}
+.pp .nombrePartido {
+    background-color:#f1ac1c;
+}
+.up .nombrePartido {
+    background-color: #D8242A;
+}
+.partido .nombrePartido p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5rem;
+    height: 3rem;
+    left: 0.6rem;
+}
+.ap .nombrePartido p {
+    margin-top: -1.5rem;
+    height: 3rem;
+}
+.congresista .voto {
+    width: 12rem;
+    margin-left: 7rem;
+    padding: 0 2rem;
+    border-left: 1px solid;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+.congresista .voto p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+.infoVacancia {
+    width: 120rem;
+    margin: 0 auto;
+}
+.infoVacancia h3 {
+    font-family: 'Roboto', sans-serif;
+}
