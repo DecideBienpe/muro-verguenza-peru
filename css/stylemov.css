@@ -1,0 +1,118 @@
+
+
+@media (max-width: 1000px) {
+
+    .headerSection {
+        display: block;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    header img, .imgSlider {
+        height: 94rem;
+        min-height: 94rem;
+    }
+
+    .text {
+        width:100%;
+        position: relative;
+        height: 50rem;
+    }
+
+    h1 {
+        width: 35rem;
+        margin: 0 auto;
+        font-size: 7rem;
+    }
+
+    .headrindex {
+        height: 171rem;
+    }
+
+    .informateSite, .involucrateSite {
+        width: 100%;
+        max-width: 75rem;
+    }
+
+    .containerText {
+        margin-top: -22rem;
+    }
+
+    .partido .logo {
+        width: 9rem;
+    }
+    .partido .nombrePartido {
+        width: 11rem;
+    }
+    .nombreCongresista p {
+        font-size: 1.3rem;
+    }
+    .nombreCongresista {
+        width: 34rem;
+    }
+    .congresista .voto {
+        width: 8rem;
+        margin-left: 0rem;
+    }
+    .congresista .voto p {
+        font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row div {
+        width: 32rem;
+        margin: 0 auto;
+    }
+
+    .bandera {
+        display: none !important;
+    }
+
+    .containerText {
+        margin-top: -35rem;
+    }
+
+    .text {
+        height: 72rem;
+    }
+
+    .partido .logo {
+        width: 5rem;
+    }
+    .logo img {
+        width: 5rem;
+        left: 0%;
+        margin-left: 0;
+    }
+    .nombreCongresista p {
+        font-size: 1rem;
+    }
+    .nombreCongresista {
+        width: 22rem;
+    }
+    .congresista .voto {
+        width: 6rem;
+        margin-left: 0rem;
+    }
+    .congresista .voto p {
+        font-size: 1rem;
+    }
+    .partido .nombrePartido p {
+        font-size: 1.3rem;
+    }
+    .partido .nombrePartido {
+        width: 7rem;
+    }
+    .infoVacancia {
+        width: 35rem;
+        margin: 0;
+    }
+  }
